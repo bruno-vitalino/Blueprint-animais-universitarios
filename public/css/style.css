@@ -4,6 +4,10 @@
 
 /*  barra de navegação  */
 
+html {
+  scroll-behavior: smooth;
+}
+
 #nav{ 
   background-color: #FD5F2D;
   font-family: 'Poppins', sans-serif;
@@ -192,10 +196,15 @@
 
 /*  Catalogo  */
 
+#text-catalogo{
+  margin-bottom: 50px;
+}
+
 #text-catalogo h1{
   font-family:'Lilita One', cursive;
   font-size: 100px;
   color:#CE2501 ;
+  
   
 }
 #text-catalogo h3{
@@ -317,6 +326,10 @@ img{
   height: 90px;
 }
 
+#container-card{
+  margin-left: -300px;
+}
+
 #myBtnContainer p{
   padding: 0px;
   color: #c5c5c5;
@@ -366,7 +379,7 @@ img{
 
 .margin-catalogo{
 
-  margin-top: 730px;
+  margin-top: 500px;
 
 }
 
@@ -392,6 +405,13 @@ img{
    outline: none !important;
    box-shadow: none;
 }
+
+#padding-icon-adm{
+  width: 14%;
+  flex: 0 0 14%;
+  max-width: 14%;
+}
+
 
 
 /*  catalogo slides CAHORROS */
@@ -439,7 +459,7 @@ img{
   top: 45px;
   right: -385px;
   border: none;
-  /*outline:none;*/
+  outline:none;
 
   z-index: +1;
   box-shadow: -15px 0px 10px -5px rgba(0,0,0,0.15);
@@ -715,6 +735,9 @@ footer svg{
 
 /*    Tela do ADM    */
 
+#main-adm{
+  margin-left: -280px;
+}
 
 #secao-adm a{
   color: black;
@@ -737,33 +760,22 @@ footer svg{
 
 #search-form-adm{
   font-family: 'Poppins', sans-serif;
-  font-size: 12px;
-  width: 200px;
-  height: 40px;
+  font-size: 24px;
+  font-weight: 500;
+  width: 350px;
+  height: 55px;
 }
 
 #search-form-adm input{
+
   border: none;
   background-color: #F5F5F5;
 }
 
 
-#button-adm-add-filter{
-  color: #FD5F2D;
-  padding: 7px;
-  margin-left: 0px;
-  background-color:white;
-  border: 3px;
-  border-color: #FD5F2D;
-  border-style: solid;
-  font-size: 18px ;
-  border-radius: 15px;
-  font-family: 'Poppins', sans-serif;
-  box-shadow: 0 2px 2px rgba(0,0,0, 0.5);
-}
-
-#button-adm-add-filter:hover{
- background-color: #FFC222;
+.margin-button-adm{
+  margin-top: -100px;
+  margin-left: 1100px;
 }
 
 
@@ -808,26 +820,24 @@ footer svg{
   display: block;
 }
 
-
 /*  botoes de page-adm  */
 
 
 #pages-adm-perfil{
   position: absolute;
   display: flex;
-  left: 40%;
   align-items: center;
-  margin: 0px;
+  margin-left: 650px;
   padding: 0px;
-  font-size: 13px;
+  font-size: 24px;
 
 }
 
 #button-adm-perfil{
   background-color: white;
   font-family: 'Poppins', sans-serif;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   border: solid 1px;
   border-color: #C5C5C5;
   
@@ -847,8 +857,8 @@ footer svg{
   background-color: white;
   border-radius: 2px 0px 0px 2px;
   font-family: 'Poppins', sans-serif;
-  width: 25px;
-  height: 25px;
+  width: 50px;
+  height: 50px;
   border: solid 1px;
   border-color: #C5C5C5;
 }
@@ -865,8 +875,8 @@ footer svg{
 #button-adm-perfil-pro{
   background-color: white;
   font-family: 'Poppins', sans-serif;
-  width: 82px;
-  height: 25px;
+  width: 150px;
+  height: 50px;
   border: solid 1px;
   border-color: #C5C5C5;
 }
@@ -889,8 +899,8 @@ footer svg{
   background-color: white;
   border-radius: 0px 2px 2px 0px;
   font-family: 'Poppins', sans-serif;
-  width: 82px;
-  height: 25px;
+  width: 150px;
+  height: 50px;
   border: solid 1px;
   border-color: #C5C5C5;
 }
@@ -898,6 +908,8 @@ footer svg{
   text-decoration: none;
   color: black;
 }
+
+
 
 
 
@@ -1334,13 +1346,27 @@ input, label, select {
   display:block;
 }
 
-.divs-topicos{
+.divs-topicos, .divs-topicos-back{
   background-color: #CE2501;
   width: 100%;
   color: white;
-  font-size: 20px;
+  
   height: 50px;
   padding: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.divs-topicos h4{
+  font-size: 25px;
+  font-weight: 500;
+  margin-left: -15px;
+}
+  
+.divs-topicos-back{
+  position: absolute;
+  right: 0;
+  z-index: -2;
 }
 
 
@@ -1380,26 +1406,38 @@ input, label, select {
 
 #button-enviar{
   color: #CE2501;
-  width: 200px;
-  padding: 10px;
+
+  padding: 15px;
+  padding-left: 50px;
+  padding-right: 50px;
+
   margin: 30px;
   margin-left: 0px;
-  background-color:white;
-  border: 3px;
+
+  background-color:#FFFFFF;
+  border: 5px;
   border-color: #CE2501;
   border-style: solid;
-  font-size: 18px ;
+  font-size: 27px ;
   border-radius: 15px;
+
   font-family: 'Poppins', sans-serif;
-  font-weight: bold;
-  box-shadow: 0 2px 2px rgba(0,0,0, 0.5);
+  font-weight: 700;
+
+  box-shadow: 0px 15px 20px -15px rgba(0,0,0,0.5);
 }
 #button-enviar a{
-  background-color: none;
+  color: #CE2501;
   text-decoration: none;
-  color:#CE2501;
 }
 
 #button-enviar:hover{
-  background-color: #FD5F2D;
+  color: #FFFFFF;
+  font-weight: 500;
+  background-color: #CE2501;
+}
+
+#button-enviar:hover a{
+  color: #FFFFFF;
+  font-weight: 500;
 }

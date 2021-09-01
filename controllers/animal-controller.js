@@ -114,7 +114,7 @@ exports.postAnimal = async (req,res,next) => {
         request: {
           type: 'GET',
           description: 'Retorna todos os animais',
-          url: process.env.URL_API + 'perfil'
+          url: process.env.URL_API
         }
       }
     }

@@ -85,8 +85,16 @@
             </h4>
 
             <div class="col-12 pt-1 d-flex" id="button">
-                <button type="button" class="btn btn-none  btn-lg " id="button_inicial">QUERO ADOTAR</button>
-                <button type="button" class="btn btn-none  btn-lg " id="button_inicial">QUERO AJUDAR</button>
+                <button type="button" class="btn btn-none  btn-lg " id="button_inicial">
+                    <a href="#queroadotar">
+                        QUERO ADOTAR
+                    </a>
+                </button>
+                <button type="button" class="btn btn-none  btn-lg " id="button_inicial">
+                    <a href="#queroajudar">
+                        QUERO AJUDAR
+                    </a>
+                </button>
             </div>
 
         </div>
@@ -95,8 +103,8 @@
 
     <!----------------------------------------------------------------------------->
     <!--  sobre nos  -->
+    <div id="quemsomos"></div>
     <div class="row-1 p-5">
-
         <svg id="equipe-img" height="800" viewBox="0 0 850 850" fill="none" xmlns="http://www.w3.org/2000/svg">
             <defs>
                 <pattern id="pattern0" height="1" width="1">
@@ -107,9 +115,9 @@
                 d="M824.79,285.64c17.49-43.92,29.91-88.83,23.5-137-4-30.46-16.36-57-37.3-79.25-32.73-34.71-74.24-54.14-119.8-65.18-35.52-8.61-69.75-3.93-102.54,13-25.83,13.35-48.78,30.85-72.44,47.36-24.64,17.21-49.81,33.54-76.9,46.55a426.59,426.59,0,0,1-126.94,38.34c-36.53,5.07-73.15,8.28-109.41,9.87-12.54-1.32-24.38.88-36.29,1.18-43.33,1.1-86.67-.66-130,1.39-12.24.58-24.45,1.23-36.62,2.16V633.84q31.52,28.26,64.86,54.31a804.82,804.82,0,0,0,118.4,77.28c71.38,37.94,146.45,65,226.81,76.73A754.39,754.39,0,0,0,512.72,850c8.57.07,17.15-.9,25.71-1.54,15.19-1.15,30.48-1.59,45.52-3.79,45.45-6.66,89.72-18,131.95-36.41,52.43-22.88,90.56-59.52,109-114.67,8.69-26,11.15-52.74,10.3-80.15a277.45,277.45,0,0,0-9.27-63.14c-7-26.43-19.79-50.64-29.67-76-15.82-40.53-17.47-81-.71-121.48C804.9,330.28,815.76,308.33,824.79,285.64Z"
                 fill="url(#pattern0)" />
         </svg>
-
     </div>
 
+    
     <div class="col-8" id="abouts">
         <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
@@ -133,13 +141,13 @@
                 <div class="carousel-item">
                     <div class=" d-none d-md-block">
                         <h5>Como o AU funciona?</h5>
-                        <p>O Animais Universitários é um projeto voluntário que dá assistência a animais em estado de
-                            vulnerabilidade no Campus do Pici, nosso maior objetivo é encontrar um lar para cada animal
-                            abandonado da faculdade. <br> <br>
-
-                            Para isso, ao resgatarmos um animal vulnerável, primeiro damos todo o suporte necessário
-                            para sua reabilitação. Assim que o animal estiver recuperado e saudável o disponibilizamos
-                            para encontrar seu novo lar.
+                        <p>O processo de regaste de uma animal fragilizado conta com várias etapas. A primeira seria 
+                            selecionar o animal que mais precisa de ajuda dentro do Campus do Pici, logo depois 
+                            abrigamos esse animal na casa de um dos voluntários que estará disponível no momento. 
+                            A próxima etapa é cuidar da saúde do animal, levando para fazer exames, castrar, 
+                            vermifugar dentre outras necessidades que o animal precisar. 
+                            Por último, nós disponibilizamos esse animal para a adoção em nossas redes sociais!
+                            <br> <br>
                         </p>
                     </div>
                 </div>
@@ -161,7 +169,7 @@
 
 
     <!--  Filtro apresentação  -->
-
+    <div id="queroadotar"></div>
     <center class="pt-5" id="text-catalogo">
         <h1 class="text-center">Quero adotar!</h1>
         <h3 class="text-center">Aqui você pode encontrar seu novo melhor amigo.</h3>
@@ -365,16 +373,20 @@
     </svg></button>
 -->
             <div class="">
-                <div id="container3">
-                    <a href="#">
-                        <img src="https://i.imgur.com/oo67PIH.jpg" class="imagem-tamanho"></img>
+                <div id="container-card" class="d-flex">
+                    
+                    <div>
+                    <!-- CACHORRO 01-->
+                    
+                    <a href="perfil/3">
+                        <img src="/img/03.jpg" class="imagem-tamanho"></img>
                         <div class="d-block" id="info">
-                            <h3>  <%= animais[0].nome%>  </h3>
+                            <h3>  <%= animais[2].nome%>  </h3>
                             <div
                             class="d-flex"
                             id="info-nome">
                                 
-                            <ul id="P" class="<% if(animais[0].porte == 'Pequeno'){ %>
+                            <ul id="P" class="<% if(animais[2].porte == 'Pequeno'){ %>
                                 text-white bg-danger border-danger
                                                 <% } else{ %>      
                                                 <% } %>"
@@ -382,14 +394,67 @@
                                     P
                                 </ul>
                                 <ul id="M" class= 
-                                "<% if(animais[0].porte == 'médio'){ %>
+                                "<% if(animais[2].porte == 'Médio'){ %>
                                     text-white bg-danger border-danger
                                 <% } else{ %>      
                                 <% } %>">
                                     M
                                 </ul>
                                 <ul id="G" class= 
-                                "<% if(animais[0].porte == 'médio'){ %>
+                                "<% if(animais[2].porte == 'Grande'){ %>
+                                    text-white bg-danger border-danger
+                                <% } else{ %>      
+                                <% } %>">
+                                    G
+                                </ul>
+
+                                <spam id="circle"></spam>
+
+                                <div class="px-3">
+                                    <div class="d-flex" id="genero-nome">
+                                        <svg id="Camada_1" height="23px" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                                            <title>Filtro - Macho</title>
+                                            <path d="M175,36a10.18,10.18,0,0,0-2.1-6.58C170,25.9,166.09,25,162,25q-17.65,0-35.3.37c-8.1.15-13.83,7.7-12.23,15.79,1,5.26,6.47,11.86,14,10,1.26-.31,2.57-.42,4-.66a2.69,2.69,0,0,1-.36.69c-3.47,3.41-7,6.81-10.49,10.26A60.17,60.17,0,0,0,86.28,50C52.43,50,25,78,25,112.5S52.43,175,86.28,175s61.27-28,61.27-62.5A63,63,0,0,0,138,79l13.36-12.85a84.5,84.5,0,0,1,.49,8.91,11.59,11.59,0,0,0,11.48,11.09c5.92.08,11.37-4.47,11.5-10.53C175.12,62.43,175,49.22,175,36ZM86.28,152.5c-21.66,0-39.22-17.91-39.22-40s17.56-40,39.22-40,39.21,17.91,39.21,40S107.94,152.5,86.28,152.5Z"/>
+                                        </svg>
+
+                                        <h5><%= animais[2].sexo%></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+
+                </div>
+
+                <div class="px-3"></div>
+
+                <div>
+                    <!-- CACHORRO 02-->
+                    
+                    <a href="perfil/4">
+                        <img src="/img/04.jpg" class="imagem-tamanho"></img>
+                        <div class="d-block" id="info">
+                            <h3>  <%= animais[3].nome%>  </h3>
+                            <div
+                            class="d-flex"
+                            id="info-nome">
+                                
+                            <ul id="P" class="<% if(animais[3].porte == 'Pequeno'){ %>
+                                text-white bg-danger border-danger
+                                                <% } else{ %>      
+                                                <% } %>"
+                            >
+                                    P
+                                </ul>
+                                <ul id="M" class= 
+                                "<% if(animais[3].porte == 'Médio'){ %>
+                                    text-white bg-danger border-danger
+                                <% } else{ %>      
+                                <% } %>">
+                                    M
+                                </ul>
+                                <ul id="G" class= 
+                                "<% if(animais[3].porte == 'Grande'){ %>
                                     text-white bg-danger border-danger
                                 <% } else{ %>      
                                 <% } %>">
@@ -407,12 +472,16 @@
                                                 d="M162.5,70.27a62.5,62.5,0,1,0-75.88,61.31c.08,4.36,0,10.27,0,14.49H84.39c-3.94,0-7.89-.09-11.82.05a12.15,12.15,0,0,0-11.18,15.82c1.6,5.26,6.08,8.52,12.09,8.64,4.27.09,8.55,0,13.38,0,0,3.85-.21,7.46,0,11A11.05,11.05,0,0,0,94,191.36,11.55,11.55,0,0,0,106.12,190a11.94,11.94,0,0,0,4.94-10.25c0-3,0-6,0-9.17h2.21c4.14,0,8.29.1,12.43,0A12.24,12.24,0,0,0,138,158.08c-.09-6.73-5.47-11.89-12.54-12-3.39-.05-6.77,0-10.16,0h-4.07V132A62.71,62.71,0,0,0,162.5,70.27ZM60,70.27a40,40,0,1,1,40,40.17A40.08,40.08,0,0,1,60,70.27Z" />
                                         </svg>
 
-                                        <h5>Fêmea</h5>
+                                        <h5><%= animais[3].sexo%></h5>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                </a>
+                    </a>
+
+                </div>
+
+                <div class="px-3"></div>
 
                 </div>
             </div>
@@ -632,14 +701,121 @@
             d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5H11.5z" />
     </svg></button>
 -->
-            <div class="">
-                <div id="container4">
-                    <div class="grid-container4 service-box pt-2">
+<div class="">
+    <div id="container-card" class="d-flex">
+        
+        <div>
+        <!-- GATO 01-->
+        
+        <a href="perfil/1">
+            <img src="/img/01.jpg" class="imagem-tamanho"></img>
+            <div class="d-block" id="info">
+                <h3>  <%= animais[0].nome%>  </h3>
+                <div
+                class="d-flex"
+                id="info-nome">
                     
-                       
+                <ul id="P" class="<% if(animais[0].porte == 'Pequeno'){ %>
+                    text-white bg-danger border-danger
+                                    <% } else{ %>      
+                                    <% } %>"
+                >
+                        P
+                    </ul>
+                    <ul id="M" class= 
+                    "<% if(animais[0].porte == 'Médio'){ %>
+                        text-white bg-danger border-danger
+                    <% } else{ %>      
+                    <% } %>">
+                        M
+                    </ul>
+                    <ul id="G" class= 
+                    "<% if(animais[0].porte == 'Grande'){ %>
+                        text-white bg-danger border-danger
+                    <% } else{ %>      
+                    <% } %>">
+                        G
+                    </ul>
+
+                    <spam id="circle"></spam>
+
+                    <div class="px-3">
+                        <div class="d-flex" id="genero-nome">
+                            <svg id="Camada_1" height="22px" data-name="Camada 1"
+                                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                                <title>Filtro - Femea</title>
+                                <path
+                                    d="M162.5,70.27a62.5,62.5,0,1,0-75.88,61.31c.08,4.36,0,10.27,0,14.49H84.39c-3.94,0-7.89-.09-11.82.05a12.15,12.15,0,0,0-11.18,15.82c1.6,5.26,6.08,8.52,12.09,8.64,4.27.09,8.55,0,13.38,0,0,3.85-.21,7.46,0,11A11.05,11.05,0,0,0,94,191.36,11.55,11.55,0,0,0,106.12,190a11.94,11.94,0,0,0,4.94-10.25c0-3,0-6,0-9.17h2.21c4.14,0,8.29.1,12.43,0A12.24,12.24,0,0,0,138,158.08c-.09-6.73-5.47-11.89-12.54-12-3.39-.05-6.77,0-10.16,0h-4.07V132A62.71,62.71,0,0,0,162.5,70.27ZM60,70.27a40,40,0,1,1,40,40.17A40.08,40.08,0,0,1,60,70.27Z" />
+                            </svg>
+
+                            <h5><%= animais[0].sexo%></h5>
+                        </div>
                     </div>
                 </div>
             </div>
+        </a>
+
+    </div>
+
+    <div class="px-3"></div>
+
+    <div>
+        <!-- GATO 02-->
+        
+        <a href="perfil/2">
+            <img src="/img/02.jpg" class="imagem-tamanho"></img>
+            <div class="d-block" id="info">
+                <h3>  <%= animais[1].nome%>  </h3>
+                <div
+                class="d-flex"
+                id="info-nome">
+                    
+                <ul id="P" class="<% if(animais[1].porte == 'Pequeno'){ %>
+                    text-white bg-danger border-danger
+                                    <% } else{ %>      
+                                    <% } %>"
+                >
+                        P
+                    </ul>
+                    <ul id="M" class= 
+                    "<% if(animais[1].porte == 'Médio'){ %>
+                        text-white bg-danger border-danger
+                    <% } else{ %>      
+                    <% } %>">
+                        M
+                    </ul>
+                    <ul id="G" class= 
+                    "<% if(animais[1].porte == 'Grande'){ %>
+                        text-white bg-danger border-danger
+                    <% } else{ %>      
+                    <% } %>">
+                        G
+                    </ul>
+
+                    <spam id="circle"></spam>
+
+                    <div class="px-3">
+                        <div class="d-flex" id="genero-nome">
+                            <svg id="Camada_1" height="23px" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+                                <title>Filtro - Macho</title>
+                                <path d="M175,36a10.18,10.18,0,0,0-2.1-6.58C170,25.9,166.09,25,162,25q-17.65,0-35.3.37c-8.1.15-13.83,7.7-12.23,15.79,1,5.26,6.47,11.86,14,10,1.26-.31,2.57-.42,4-.66a2.69,2.69,0,0,1-.36.69c-3.47,3.41-7,6.81-10.49,10.26A60.17,60.17,0,0,0,86.28,50C52.43,50,25,78,25,112.5S52.43,175,86.28,175s61.27-28,61.27-62.5A63,63,0,0,0,138,79l13.36-12.85a84.5,84.5,0,0,1,.49,8.91,11.59,11.59,0,0,0,11.48,11.09c5.92.08,11.37-4.47,11.5-10.53C175.12,62.43,175,49.22,175,36ZM86.28,152.5c-21.66,0-39.22-17.91-39.22-40s17.56-40,39.22-40,39.21,17.91,39.21,40S107.94,152.5,86.28,152.5Z"/>
+                            </svg>
+
+
+                            <h5><%= animais[1].sexo%></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+    </div>
+
+    <div class="px-3"></div>
+
+    </div>
+
+</div>
         </div>
 
 
@@ -648,29 +824,32 @@
 
         <!--   Botao de passar    --------------------------------------------->
 
-        <div class="float-right">
-            <button id="slideRight2" type="button">
-                <span id="dot">
-                    <svg id="seta" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"
-                        style="margin-left: 5px;">
-                        <title>Seta</title>
-                        <path
-                            d="M60.44,200a23.1,23.1,0,0,1-16.22-6.58,22.15,22.15,0,0,1,0-31.78L107.13,100,44.22,38.36a22.15,22.15,0,0,1,0-31.78,23.28,23.28,0,0,1,32.43,0l79.13,77.53a22.15,22.15,0,0,1,0,31.78L76.65,193.42A23.08,23.08,0,0,1,60.44,200Z" />
-                    </svg>
-                </span>
-            </button>
-            <script>
-                const bl = document.getElementById('slideRight2');
-                const bf = document.getElementById('slideLeft2');
+               <!--   Botao de passar    --------------------------------------------->
 
-                bl.onclick = function () {
-                    document.getElementById('container4').scrollLeft += 150;
-                };
-                bf.onclick = function () {
-                    document.getElementById('container4').scrollLeft -= 150;
-                };</script>
+               <div class="float-right">
+                <button id="slideRight" type="button">
+                    <span id="dot">
+                        <svg id="seta" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200"
+                            style="margin-left: 5px;">
+                            <title>Seta</title>
+                            <path
+                                d="M60.44,200a23.1,23.1,0,0,1-16.22-6.58,22.15,22.15,0,0,1,0-31.78L107.13,100,44.22,38.36a22.15,22.15,0,0,1,0-31.78,23.28,23.28,0,0,1,32.43,0l79.13,77.53a22.15,22.15,0,0,1,0,31.78L76.65,193.42A23.08,23.08,0,0,1,60.44,200Z" />
+                        </svg>
+                    </span>
+                </button>
+                <script>
+                    const buttonRight = document.getElementById('slideRight');
+                    const buttonLeft = document.getElementById('slideLeft');
+    
+                    buttonRight.onclick = function () {
+                        document.getElementById('container3').scrollLeft += 150;
+                    };
+                    buttonLeft.onclick = function () {
+                        document.getElementById('container3').scrollLeft -= 150;
+                    };
+                </script>
+            </div>
         </div>
-    </div>
 
 
     <script>
@@ -687,5 +866,7 @@
 
     </script>
 
+    
 
     <div class="margin-catalogo"></div>
+    <div id="queroajudar"></div>

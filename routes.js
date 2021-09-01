@@ -12,8 +12,8 @@ router.post('/', animalController.postSociavel);
 router.post('/', animalController.postVive);
 router.post('/', animalController.postSaude);
 
-router.get('/about', (req, res) => {
-    res.render('pages/about');
+router.get('/adm', (req, res) => {
+    res.render('pages/adm');
 });
 
 router.get('/perfil/:idAnimais', animalController.getAnimal);
@@ -26,8 +26,14 @@ router.get('/perfil-adm', (req, res) => {
     res.render('pages/perfil-adm');
 });
 
+router.get('/login', (req, res) => {
+    res.render('pages/login');
+});
+
+/*
 router.get('/cadastro', (req, res) => {
     res.render('pages/cadastro', { users: users });
 });
+*/
 
 module.exports = router;
